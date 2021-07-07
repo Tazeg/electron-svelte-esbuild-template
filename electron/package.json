@@ -1,0 +1,43 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "Electron app built with svelte + esbuild",
+  "main": "index.js",
+  "author": "@JeffProd",
+  "license": "MIT",
+  "build": {
+    "appId": "com.myapp.${name}",
+    "directories": {
+      "output": "../dist",
+      "buildResources": "./img"
+    },
+    "linux": {
+      "asar": true,
+      "category": "Network",
+      "artifactName": "myapp-v${version}-linux.${ext}",
+      "target": [
+        "AppImage"
+      ]
+    },
+    "win": {
+      "asar": true,
+      "icon": "img/icon256.ico",
+      "legalTrademarks": "(c) @JeffProd",
+      "publisherName": "@JeffProd",
+      "artifactName": "myapp-v${version}-windows.${ext}",
+      "target": [
+        "portable"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "ELECTRON_MODE=dev electron .",
+    "buildlinux": "electron-builder -l --x64",
+    "buildwindows": "electron-builder -w --x64"
+  },
+  "devDependencies": {
+    "electron": "^13.1.6",
+    "electron-builder": "^22.11.7",
+    "electron-reloader": "^1.2.1"
+  }
+}

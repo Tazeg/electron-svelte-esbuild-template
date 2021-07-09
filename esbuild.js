@@ -40,7 +40,7 @@ const options = {
   format: 'esm',
   minify: production,
   sourcemap: false,
-  outfile: './electron/bundle/bundle.js', // and bundle.css
+  outfile: './electron/public/bundle.js', // and bundle.css
   plugins: [
     sveltePlugin()
   ]

@@ -9,7 +9,7 @@
     "appId": "com.myapp.${name}",
     "directories": {
       "output": "../dist",
-      "buildResources": "./img"
+      "buildResources": "./buildressources"
     },
     "linux": {
       "asar": true,
@@ -21,7 +21,7 @@
     },
     "win": {
       "asar": true,
-      "icon": "img/icon256.ico",
+      "icon": "./buildressources/icon256.ico",
       "legalTrademarks": "(c) @JeffProd",
       "publisherName": "@JeffProd",
       "artifactName": "myapp-v${version}-windows.${ext}",

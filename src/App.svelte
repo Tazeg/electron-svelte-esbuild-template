@@ -16,6 +16,7 @@
 
 <main>
 	<h1>Hello {name}!</h1>
+  <img src="public/img/icon256.png" alt="iconapp">
 </main>
 
 <style>
